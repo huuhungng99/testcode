@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="style.css">
+	<script src="function.js"></script>
+</head>
+<body>
+	<script>
+		function calcNumber(result){
+			form.displayResult.value = form.displayResult.value + result;
+		}
+	</script>
+
+	<div class="container">
+		<form name="form">
+			<div class="display">
+				<input type="text" placeholder="0" name = "displayResult"/>
+			</div>
+
+
+			<div class="buttons">
+				<div class="row">
+					<input type="button" name="b7" value="7" onclick="calcNumber(b7.value)">
+					<input type="button" name="b8" value="8" onclick="calcNumber(b8.value)">
+					<input type="button" name="b9" value="9" onclick="calcNumber(b9.value)">
+					<input type="button" class="red" name="addb" value="+" onclick="calcNumber(addb.value)">
+				</div>
+
+				<div class="row">
+					<input type="button" name="b4" value="4" onclick="calcNumber(b4.value)">
+					<input type="button" name="b5" value="5" onclick="calcNumber(b5.value)">
+					<input type="button" name="b6" value="6" onclick="calcNumber(b6.value)">
+					<input type="button" class="red" name="subb" value="-" onclick="calcNumber(subb.value)">
+				</div>
+
+				<div class="row">
+					<input type="button" name="b1" value="1" onclick="calcNumber(b1.value)">
+					<input type="button" name="b2" value="2" onclick="calcNumber(b2.value)">
+					<input type="button" name="b3" value="3" onclick="calcNumber(b3.value)">
+					<input type="button" class="red" name="mulb" value="*" onclick="calcNumber(mulb.value)">
+				</div>
+
+				<div class="row">
+					<input type="button" name="b0" value="0" onclick="calcNumber(b0.value)">
+					<input type="button" class="red" name="dotb" value="." onclick="calcNumber(dotb.value)">
+					<input type="button" class="red" name="result" value="=" onclick="displayResult.value = eval(displayResult.value)">
+					<input type="button" class="red" name="divb" value="/" onclick="calcNumber(divb.value)">
+				</div>
+
+				<div class="row">
+					<input type="button" name="C" value="C" onclick="displayResult.value = 0">	
+					<input type="button" name="x^2" value="x^2" onclick="displayResult.value = eval(displayResult.value + '*' + displayResult.value)">
+					<input type="button" name="căn" value="căn" onclick="displayResult.value = Math.sqrt(eval(displayResult.value))">
+					<input type="button" name="1/x" value="1/x" onclick="displayResult.value = 1/(eval(displayResult.value))">
+				</div>
+
+				<div class="row">
+					<input type="button" name="%" value="%" onclick="displayResult.value = eval(displayResult.value)/100">
+					<input type="button" name="sin()" value="sin" onclick="displayResult.value = Math.sin(eval(displayResult.value))">
+					<input type="button" name="cos()" value="cos" onclick="displayResult.value = Math.cos(eval(displayResult.value))">		
+					<input type="button" name="tan()" value="tan" onclick="displayResult.value = (Math.tan(eval(displayResult.value)))">
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<div class="sign" style="margin-top: 750px; margin-left: 1500px;">
+      <p>Design by ........</p>
+    </div>
+</body>
+</html>
